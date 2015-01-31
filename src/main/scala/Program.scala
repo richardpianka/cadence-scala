@@ -6,6 +6,6 @@ import io.pianka.cadence.parser.Cadence
  */
 object Program extends App {
 
-  val result = Cadence.parse(Cadence.days, "Wednesday, Thursday and Friday")
+  val result = Cadence.parse(Cadence.dayList, "Wednesday, Thursday and Friday")
   println(result)
 }

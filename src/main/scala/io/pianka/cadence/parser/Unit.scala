@@ -2,12 +2,12 @@ package io.pianka.cadence.parser
 
 trait Unit extends Parser with Common {
 
-  def millisecond = "[M|m]illiseconds?".r
-  def second      = "[S|s]econds?".r
-  def minute      = "[M|m]inutes?".r
-  def hour        = "[H|h]ours?".r
-  def day         = "[D|d]ays?".r
-  def week        = "[W|w]eeks?".r
-  def month       = "[M|m]onths?".r
-  def year        = "[Y|y]ears?".r
+  def milliseconds = "[M|m]illiseconds?".r
+  def seconds      = "[S|s]econds?".r
+  def minutes      = "[M|m]inutes?".r
+  def hours        = "[H|h]ours?".r
+  def days         = "[D|d]ays?".r
+  def weeks        = "[W|w]eeks?".r
+  def months       = "[M|m]onths?".r
+  def years        = "[Y|y]ears?".r
 }

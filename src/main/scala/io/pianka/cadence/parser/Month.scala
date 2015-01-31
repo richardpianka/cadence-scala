@@ -17,7 +17,7 @@ trait Month extends Parser with Common {
   def november  = "[N|n]ovember"  .r ^^ { _ => Month.November }
   def december  = "[D|d]ecember"  .r ^^ { _ => Month.December}
 
-  def monthLiteral =
+  def month =
     january   |
     february  |
     march     |
@@ -31,7 +31,5 @@ trait Month extends Parser with Common {
     november  |
     december
 
-  def monthLiterals = repsep(monthLiteral, separator)
-
-  def months = monthLiterals
+  def monthList = repsep(month, separator)
 }

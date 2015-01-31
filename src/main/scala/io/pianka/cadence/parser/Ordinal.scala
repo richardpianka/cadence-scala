@@ -10,12 +10,12 @@ trait Ordinal extends Parser with Common {
   def fourth = "[F|f]ourth" .r ^^ { _ => Ordinal.Fourth }
   def last   = "[L|l]ast"   .r ^^ { _ => Ordinal.Last }
 
-  def ordinalLiteral =
+  def ordinal =
     first   |
     second  |
     third   |
     fourth  |
     last
 
-  def ordinalLiterals = repsep(ordinalLiteral, separator)
+  def ordinals = repsep(ordinal, separator)
 }
