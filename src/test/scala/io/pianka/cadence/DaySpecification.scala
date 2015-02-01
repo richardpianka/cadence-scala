@@ -6,7 +6,7 @@ import org.scalatest.{Matchers, WordSpec}
 class DaySpecification extends WordSpec with Matchers {
 
   "Days" when {
-    val day = new parser.Day {}
+    val day = new parser.DayParser {}
 
     "singular" should {
       "parse" in {

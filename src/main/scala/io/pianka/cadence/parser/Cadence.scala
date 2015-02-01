@@ -1,7 +1,10 @@
 package io.pianka.cadence.parser
 
 object Cadence extends Parser
-  with Common
-  with Unit
-  with Day
-  with Month
+  with CommonParser
+  with UnitParser
+  with DayParser
+  with MonthParser {
+
+  def every = "[E|e]very".r
+}
