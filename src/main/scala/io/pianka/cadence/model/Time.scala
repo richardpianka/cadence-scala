@@ -7,7 +7,9 @@ object Meridian {
   case object PostMeridian extends Meridian
 }
 
-sealed trait TimeLiteral {
+trait Time
+
+sealed trait TimeLiteral extends Time {
   def hour: Int
   def minute: Option[Int]
   def second: Option[Int]
