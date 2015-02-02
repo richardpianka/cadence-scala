@@ -17,5 +17,5 @@ trait OrdinalParser extends Parser with CommonParser {
     fourth  |
     last
 
-  def ordinals = repsep(ordinal, separator)
+  def ordinals = repsep(ordinal, listSeparator)
 }

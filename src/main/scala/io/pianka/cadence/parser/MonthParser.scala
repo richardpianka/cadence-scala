@@ -31,5 +31,5 @@ trait MonthParser extends Parser with CommonParser {
     november  |
     december
 
-  def monthList = repsep(month, separator)
+  def monthList = repsep(month, listSeparator)
 }

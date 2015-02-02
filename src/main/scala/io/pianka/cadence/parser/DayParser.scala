@@ -21,7 +21,7 @@ trait DayParser extends Parser with CommonParser with PrimitiveParser with Ordin
     friday    |
     saturday
 
-  def dayList = repsep(day, separator)
+  def dayList = repsep(day, listSeparator)
 
   def cardinalDays = integer ~ whiteSpace ~ "days?".r ^^ {
     case n ~ _ ~ _ => CardinalDayCadence(n)
