@@ -37,6 +37,3 @@ trait DayParser extends Parser with CommonParser with PrimitiveParser with Ordin
 
   def dayCadence = cardinalDays | ordinalDay | ordinalDays
 }
-
-// Every third wednesday of the month at noon
-// every monday, wednesday, and friday at midnight and noon
