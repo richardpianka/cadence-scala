@@ -1,6 +1,7 @@
 package io.pianka.cadence.parser
 
 import io.pianka.cadence.model.Date
+import scala.language.postfixOps
 
 trait DateParser extends Parser with CommonParser {
 
@@ -8,7 +9,8 @@ trait DateParser extends Parser with CommonParser {
   def slashSeparator = "/".r
 
   def yearPart     = """\d?\d?\d?\d""".r ^^ { _.toInt }
-  def halfYearPart = """\d\d""".r ^^ { y => s"19$y".toInt }
+  def halfYearPart(implicit default: Default)
+                   = """\d\d""" .r ^^ { y => s"${default.century}$y".toInt }
   def monthPart    = """\d?\d""".r ^^ { _.toInt }
   def dayPart      = """\d?\d""".r ^^ { _.toInt }
 

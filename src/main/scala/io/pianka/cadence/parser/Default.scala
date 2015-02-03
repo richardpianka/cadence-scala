@@ -1,4 +1,6 @@
-package io.pianka.cadence.model
+package io.pianka.cadence.parser
+
+import io.pianka.cadence.model.{Day, Month, SpecialTime, Time}
 
 trait Default {
   def month:       Month = Month.January
@@ -9,6 +11,8 @@ trait Default {
   def minute:      Int   = 0
   def second:      Int   = 0
   def millisecond: Int   = 0
+
+  def century:     Int   = 20 //prefix, not ordinal
 }
 
 object Default {

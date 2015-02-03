@@ -1,6 +1,6 @@
 package io.pianka.cadence.parser
 
-import io.pianka.cadence.model.{OrdinalDayCadence, CardinalDayCadence, OrdinalDaysCadence, Day}
+import io.pianka.cadence.model._
 
 trait DayParser extends Parser with CommonParser with PrimitiveParser with OrdinalParser {
 
@@ -37,3 +37,6 @@ trait DayParser extends Parser with CommonParser with PrimitiveParser with Ordin
 
   def dayCadence = cardinalDays | ordinalDay | ordinalDays
 }
+
+// Every third wednesday of the month at noon
+// every monday, wednesday, and friday at midnight and noon

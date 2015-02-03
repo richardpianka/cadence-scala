@@ -1,6 +1,7 @@
 package io.pianka.cadence.parser
 
 import io.pianka.cadence.model._
+import scala.language.postfixOps
 
 trait TimeParser extends Parser {
 
